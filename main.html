@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Try Finally</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="monokai.css">
+	</head>
+	<body>
+		<div class="projectLayout">
+			<h3>Project Layout</h3>
+			<ul>
+				<li class="current">Home page.html</li>
+				<li>Blog</li>
+				<li>CV</li>
+				<li>Projects</li>
+			</ul>
+		</div>
+		<div class="code">
+			<pre>
+<span class="comment">/*Click on functions to open that function's page*/</span>
+<span class="keyword">var</span> <span class="variable">homePage</span> = <span class="function">function</span>() {
+	<span class="keyword">var</span> <span class="variable">run</span> = <span class="function">function</span>() {
+		<span class="control">try</span> {
+			<!--span class="keyword">var</span> <span class="variable">blogTitles</span> = [<span class="string">"BlogTitle"</span>, <span class="string">"Title2"</span>, <span class="string">"Title3"</span>]; -->
+			<span class="comment">//<span class="deletedText">Call</span> Click this function to view my Blog</span>
+			<a href="http://blog.tryfinally.co.za" class="functionName">viewBlog</a>(<!--span class="variable">blogTitles</span-->);
+
+			<span class="comment">//<span class="deletedText">Call</span> Click this function to view my CV</span>
+			<a href="http://cv.tryfinally.co.za" class="functionName">viewCV</a>(<span class="string">"Ivan du Toit"</span>);
+
+			<span class="keyword">var</span> <span class="variable">projectTitles</span> = [<span class="string"><a href="#project/classfit">"Classfit"</a></span>, <span class="string"><a href="#project/ModernCV">"ModernCV"</a></span>];
+			<span class="comment">//<span class="deletedText">Call</span> Click this function to view my viewProjects</span>
+			<a href="#viewProjects" class="functionName">viewProjects</a>(<span class="variable">projectTitles</span>);
+		} <span class="control">catch</span> (Exception <span class="variable">fail</span>) {
+			<a href="#log" class="functionName">log</a>(<span class="variable">fail</span>);
+		} <span class="control">finally</span> {
+			<a href="#log"  class="functionName">log</a>({<span class="string">"success"</span>:<span class="constant">true</span>});
+		}
+	};
+}();
+
+<span class="variable">homePage</span>.<a href="" class="functionName">run</a>();
+			</pre>
+		</div>
+	</body>
+</html>
