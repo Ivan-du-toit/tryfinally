@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Try Finally</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="monokai.css">
+	</head>
+	<body>
+		<div class="projectLayout">
+			<h3>Project Layout</h3>
+			<ul>
+				<li><a href="index.js">index.js</a></li>
+				<li><a href="http://blog.tryfinally.co.za">Blog</a></li>
+				<li><a href="http://cv.tryfinally.co.za">CV</a></li>
+				<li class="current"><a href="projects.js">Projects</a></li>
+				<li>
+					<ul class="indent">
+						<li><a href="projects/classfit.js">Classfit.js</a></li>
+						<li><a href="projects/modernCV.js">ModernCV.js</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="code">
+			<pre>
+<span class="comment">/*Click on functions to open that function's page*/</span>
+<span class="keyword">var</span> <span class="variable">viewProjects</span> = <span class="function">function</span>(projectTitles) {
+	<span class="control">try</span> {
+
+		<span class="comment">//<span class="deletedText">Call</span> Click this function to view more about Classfit</span>
+		<a href="classfit.html" class="functionName">viewClassfit</a>();
+
+		<span class="comment">//<span class="deletedText">Call</span> Click this function to view more about ModernCV</span>
+		<a href="modernCV.html" class="functionName">viewModernCV</a>();
+
+	} <span class="control">catch</span> (<span class="variable">commentOrCritique</span>) {
+		<a href="#log" class="functionName">log</a>(<span class="variable">commentOrCritique</span>);
+	} <span class="control">finally</span> {
+		<a href="#log"  class="functionName">log</a>({<span class="string">"success"</span>:<span class="constant">true</span>});
+	}
+}
+
+			</pre>
+		</div>
+	</body>
+</html>

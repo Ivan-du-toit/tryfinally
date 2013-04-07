@@ -1,0 +1,56 @@
+<html ng-app>
+	<head>
+		<title>Try Finally - comments</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="monokai.css">
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+		<script src="commentCtrl.js"></script>
+	</head>
+	<body >
+		<div class=>
+			<div class="projectLayout">
+				<h3>Project Layout</h3>
+				<ul>
+					<li class="current"><a href="index.js">index.js</a></li>
+					<li><a href="http://blog.tryfinally.co.za">Blog</a></li>
+					<li><a href="http://cv.tryfinally.co.za">CV</a></li>
+					<li><a href="projects.js">Projects</a></li>
+					<li>
+						<ul class="indent">
+							<li><a href="projects/classfit.js">Classfit.js</a></li>
+							<li><a href="projects/modernCV.js">ModernCV.js</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="code" ng-controller="commentCtrl">
+			<pre>
+<span class="comment">/*Click on functions to open that function's page*/</span>
+<span class="keyword">var</span> <span class="variable">feedback</span> = <span class="function">function</span>() {
+	<span class="keyword">var</span> <span class="variable">add</span> = <span class="function">function</span>() {
+		<span class="control">try</span> {
+			<span class="comment">//Edit this object to create your comment</span>
+			<span class="keyword">var</span> <span class="variable">newComment</span> = {
+				"author":"<span id="author" contentEditable="true"></span>", 
+				"title":"<span id="title" contentEditable="true"></span>",
+				"comment": "<span id="comment" contentEditable="true"></span>"
+			};
+
+			<span class="comment">//Click this function to post your comment</span>
+			<span class="variable">comments</span>.<a href="#pushcomment" ng-click="addComment();">push</a>(<span class="variable">newComment</span>);
+		} <span class="control">catch</span> (<span class="variable">commentOrCritique</span>) {
+			<a href="comment.js" class="functionName">log</a>(<span class="variable">commentOrCritique</span>);
+		} <span class="control">finally</span> {
+			<a href="comment.js"  class="functionName">log</a>({<span class="string">"success"</span>:<span class="constant">true</span>});
+		}
+	};
+	<span class="keyword">var</span> <span class="variable">comments</span> = [<span ng-repeat="comment in comments"><span ng-hide="$index==0">,</span>
+		{"author":"{{comment.author}}", "title":"{{comment.title}}", "timestamp": "{{comment.timestamp}}", 
+		"comment": "{{comment.comment}}"}</span>
+	]
+};
+			</pre>
+			</div>
+		</div>
+	</body>
+</html>

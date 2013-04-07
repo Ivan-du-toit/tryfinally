@@ -1,0 +1,13 @@
+#AddType text/html .java
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /newtryfinally
+
+    #Checks to see if the user is attempting to access a valid file,
+    #such as an image or css document, if this isn't true it sends the
+    #request to index.php
+	RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)\.js$ $1.html [L]
+	
+</IfModule>

@@ -8,7 +8,7 @@ body {
 
 ul {
 	list-style: none;
-	margin:0px;
+	margin:5px;
 	padding:0px;
 }
 
@@ -17,16 +17,20 @@ h3 {
 }
 
 .projectLayout {
+	position: fixed;
 	float: left;
-	height:100%; 
+	height:100%;
+	margin-bottom: auto;
 	padding:0px;
 	margin-right:20px;
 	background-color: #f8f8f2;
 	color: black;
+
 }
 
 .code {
 	padding: 10px;
+	margin-left: 175px;
 }
 
 li {
@@ -52,4 +56,10 @@ a:visited {
 
 .indent {
 	padding-left: 20px;
+}
+
+input[type=text] {
+	background-color: #272822;
+	color: inherit;
+	border: none;
 }

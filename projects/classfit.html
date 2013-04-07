@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Try Finally</title>
+		<base href="..">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="monokai.css">
+	</head>
+	<body>
+		<div class="projectLayout">
+			<h3>Project Layout</h3>
+			<ul>
+				<li><a href="index.js">index.js</a></li>
+				<li><a href="http://blog.tryfinally.co.za">Blog</a></li>
+				<li><a href="http://cv.tryfinally.co.za">CV</a></li>
+				<li><a href="projects.js">Projects</a></li>
+				<li>
+					<ul class="indent">
+						<li class="current"><a href="projects/classfit.js">Classfit.js</a></li>
+						<li><a href="projects/modernCV.js">ModernCV.js</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="code">
+			<pre>
+<span class="comment">/*Click on functions to open that function's page*/</span>
+<span class="keyword">var</span> <span class="variable">viewClassfit</span> = <span class="function">function</span>() {
+	<span class="control">try</span> {
+		<span class="keyword">var</span> <span class="variable">project</span> = {
+			<span class="string">"Name"</span>: <span class="string">"Classfit"</span>,
+			<span class="string">"Description"</span>: <span class="string">"A web application that calculates all the possible 
+				time table permutations for a student given a set of modules.
+				The student can then pick one and have it uploaded to their Google Calendar."</span>,
+			<span class="string">"URL"</span>: <span class="string">"<a href="http://classfit.co.za">classfit.co.za</a>"</span>
+		};
+
+	} <span class="control">catch</span> (<span class="variable">commentOrCritique</span>) {
+		<a href="comment.js" class="functionName">log</a>(<span class="variable">commentOrCritique</span>);
+	} <span class="control">finally</span> {
+		<a href="comment.js"  class="functionName">log</a>({<span class="string">"success"</span>:<span class="constant">true</span>});
+	}
+};
+			</pre>
+		</div>
+	</body>
+</html>
